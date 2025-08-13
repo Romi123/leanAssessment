@@ -1,4 +1,3 @@
-// cypress.config.js
 import { defineConfig } from 'cypress';
 import mochawesome from 'cypress-mochawesome-reporter/plugin.js';
 
@@ -7,6 +6,15 @@ export default defineConfig({
     baseUrl: 'https://www.saucedemo.com',
     setupNodeEvents(on, config) {
       mochawesome(on);
+
+      const environment = config.env.ENV || 'prod';
+      const urls = {
+        qa: 'https://hub.qa.saucedemo.com',
+        staging: 'https://hub.stag.saucedemo.com',
+        prod: 'https://www.saucedemo.com'
+      };
+      config.baseUrl = urls[environment];
+
       return config;
     },
   },
@@ -17,5 +25,7 @@ export default defineConfig({
     html: true,
     json: true,
     charts: true,
+    embeddedScreenshots: true, // optional but recommended
+    inlineAssets: true
   },
 });
