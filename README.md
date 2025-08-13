@@ -1,6 +1,6 @@
-Lean-sauce-demo Cypress Automation
+**Lean-sauce-demo Cypress Automation**
 
-Overview
+**Overview**
 
 This project contains an automated test suite for the Sauce Labs demo website.
 
@@ -8,163 +8,81 @@ It covers the customer flow of selecting 3 random items and completing the check
 
 
 
-Project Structure
+**Project Structure**
 
-bash
+Lean-sauce-demo-cypress/
+├── cypress/
+│   ├── e2e/
+│   │   └── test.cy.js           # Test scenario for complete checkout
+│   ├── pages/                   # Page Object Model files
+│   │   ├── BasePage.js
+│   │   ├── LoginPage.js
+│   │   ├── ProductListPage.js
+│   │   ├── CartPage.js
+│   │   ├── CheckoutPage.js
+│   │   └── CheckoutCompletePage.js
+│   └── reports/                 # Mochawesome reports generated here
+├── package.json
+├── package-lock.json
+├── cypress.config.js
+└── README.md
 
-Copy
-
-Edit
-
-cypress/
-
-  e2e/
-
-    test.cy.js           # Test scenario for complete checkout
-
-  pages/                 # Page Object Model files
-
-    BasePage.js
-
-    LoginPage.js
-
-    ProductListPage.js
-
-    CartPage.js
-
-    CheckoutPage.js
-
-    CheckoutCompletePage.js
-
-  mindmap/
-
-    Sauce Demo.png        # Mind map image
-
-  reports/               # Mochawesome test reports
-
-package.json
-
-cypress.config.js
-
-README.md
-
-Prerequisites
+**Prerequisites**
 
 Node.js >= 18.x
-
-
-
 npm >= 9.x
 
 
 
-Setup
+**Setup**
 
-Clone the repository:
-
-
-
-bash
-
-Copy
-
-Edit
+1. Clone the repository:
 
 git clone <YOUR\_GITHUB\_REPO\_URL>
 
 cd Lean-sauce-demo-cypress
 
-Install dependencies:
-
-
-
-bash
-
-Copy
-
-Edit
+2. Install dependencies:
 
 npm install
 
-Running Tests
+**Running Tests**
 
-Open Cypress GUI:
-
-
-
-bash
-
-Copy
-
-Edit
-
+**Open Cypress GUI:**
 npx cypress open
 
-Run tests headlessly:
-
-
-
-bash
-
-Copy
-
-Edit
-
+**Run tests headlessly:**
 npx cypress run --spec "cypress/e2e/test.cy.js"
 
-Test Reporting
+**Test Reporting**
 
 Mochawesome generates detailed reports at:
 
-
-
-bash
-
-Copy
-
-Edit
-
 cypress/reports/index.html
 
-Test Coverage
+**Test Coverage**
 
-Login with valid credentials
+Login with valid credentials.
 
+Adding 3 random items to the cart.
 
+Proceeding to checkout.
 
-Add 3 random products to cart
+Filling in checkout information.
 
+Verifying order success and confirmation messages.
 
-
-Complete checkout
-
-
-
-Verify order success and confirmation messages
-
-
-
-Test Flow Mind Map
-
-
-
-Notes
+**Notes**
 
 Follows Page Object Model (POM) for maintainable code
-
-
-
 No hard-coded locators in test scripts
-
-
-
 Reusable abstractions and separation of concerns implemented
 
 
 
-Author
+**Author**
 
-Romi Varghese
+**Romi Varghese**
 
 QA Engineer | Automation Testing | QA Lead
 
