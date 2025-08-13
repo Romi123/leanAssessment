@@ -10,7 +10,7 @@ It covers the customer flow of selecting 3 random items and completing the check
 
 **Project Structure**
 
-Lean-sauce-demo-cypress/
+```Lean-sauce-demo-cypress/
 ├── cypress/
 │   ├── e2e/
 │   │   └── test.cy.js           # Test scenario for complete checkout
@@ -26,6 +26,7 @@ Lean-sauce-demo-cypress/
 ├── package-lock.json
 ├── cypress.config.js
 └── README.md
+```
 
 **Prerequisites**
 
@@ -38,27 +39,27 @@ npm >= 9.x
 
 1. Clone the repository:
 
-git clone <YOUR\_GITHUB\_REPO\_URL>
+```git clone <YOUR\_GITHUB\_REPO\_URL>```
 
-cd Lean-sauce-demo-cypress
+```cd Lean-sauce-demo-cypress```
 
 2. Install dependencies:
 
-npm install
+```npm install```
 
 **Running Tests**
 
 **Open Cypress GUI:**
-npx cypress open
+```npx cypress open```
 
 **Run tests headlessly:**
-npx cypress run --spec "cypress/e2e/test.cy.js"
+```npx cypress run --spec "cypress/e2e/test.cy.js"```
 
 **Test Reporting**
 
 Mochawesome generates detailed reports at:
 
-cypress/reports/index.html
+```cypress/reports/index.html```
 
 **Test Coverage**
 
