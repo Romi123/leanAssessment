@@ -55,6 +55,10 @@ npm >= 9.x
 **Run tests headlessly:**
 ```npx cypress run --spec "cypress/e2e/test.cy.js"```
 
+**Run tests based on env(prod)**
+```npx cypress run --env ENV=prod --reporter cypress-mochawesome-reporter```
+
+
 **Test Reporting**
 
 Mochawesome generates detailed reports at:
